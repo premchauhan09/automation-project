@@ -16,16 +16,16 @@ public class LoginTest extends BaseTest {
     public Object[][] loginData() {
         return new Object[][] {
             {"standard_user", "secret_sauce", true, ""},
-            {"locked_out_user", "secret_sauce", false, "Error: Sorry, this user has been locked out."},
+            {"locked_out_user", "secret_sauce", false, "Epic sadface: Sorry, this user has been locked out."},
             {"problem_user", "secret_sauce", true, ""},
             {"performance_glitch_user", "secret_sauce", true, ""},
             {"error_user", "secret_sauce", true, ""},
             {"visual_user", "secret_sauce", true, ""},
-            {"standard_user", "wrong_pass", false, "Error: Username and password do not match any user in this service"},
-            {"invalid_user", "secret_sauce", false, "Error: Username and password do not match any user in this service"},
-            {"", "secret_sauce", false, "Error: Username is required"},
-            {"standard_user", "", false, "Error: Password is required"},
-            {"", "", false, "Error: Username is required"}
+            {"standard_user", "wrong_pass", false, "Epic sadface: Username and password do not match any user in this service"},
+            {"invalid_user", "secret_sauce", false, "Epic sadface: Username and password do not match any user in this service"},
+            {"", "secret_sauce", false, "Epic sadface: Username is required"},
+            {"standard_user", "", false, "Epic sadface: Password is required"},
+            {"", "", false, "Epic sadface: Username is required"}
         };
     }
 
