@@ -21,7 +21,7 @@ public class CartTest extends BaseTest {
 	    ProductsPage productsPage = new ProductsPage(driver);
 	    productsPage.addBackpackToCart();
 
-	    // 👀 Pause so you can see the item added
+	    // Pause so you can see the item added
 	    TimeUnit.SECONDS.sleep(2);
 
 	    productsPage.openCart();
