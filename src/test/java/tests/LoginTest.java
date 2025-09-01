@@ -7,10 +7,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.time.Duration;
 
-import base.BaseTest;
+import base.LoginBaseTest;
 import page.LoginPage;
 
-public class LoginTest extends BaseTest {
+public class LoginTest extends LoginBaseTest {
 
     @DataProvider(name = "loginData")
     public Object[][] loginData() {
@@ -30,7 +30,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test(dataProvider = "loginData")
-    public void testLogin(String username, String password, boolean isSuccess, String expectedError) throws InterruptedException {
+    public void testLogin(String username, String password, boolean isSuccess, String expectedError) {
         LoginPage loginPage = new LoginPage(driver);
 
         // Perform login
@@ -39,15 +39,13 @@ public class LoginTest extends BaseTest {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
         if (isSuccess) {
-            // Wait for Products page to be visible
+            // Wait for Products page
             wait.until(ExpectedConditions.visibilityOf(loginPage.getProductsTitleElement()));
             Assert.assertTrue(loginPage.isProductsPageDisplayed(), "Login should succeed but failed!");
         } else {
-            // Wait for error message to be visible
+            // Wait for error message
             wait.until(ExpectedConditions.visibilityOf(loginPage.getErrorMessageElement()));
             Assert.assertEquals(loginPage.getErrorMessage().trim(), expectedError, "Error message mismatch!");
         }
-
-        Thread.sleep(2000);
     }
 }
