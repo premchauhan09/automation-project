@@ -1,0 +1,5 @@
+name: Suite
+configFailurePolicy: skip
+tests:
+  - name: Test
+
