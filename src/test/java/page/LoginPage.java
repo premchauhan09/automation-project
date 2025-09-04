@@ -3,14 +3,14 @@ package page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
 public class LoginPage {
-    @SuppressWarnings("unused")
-	private WebDriver driver;
+    private WebDriver driver;
     private WebDriverWait wait;
 
     // Locators
@@ -25,21 +25,37 @@ public class LoginPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5)); // max wait 5s
     }
 
+    // Utility: highlight element with red border
+    private void highlightElement(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].setAttribute('style', 'border: 3px solid red;');", element);
+        try {
+            Thread.sleep(200); // small pause so highlight is visible
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        js.executeScript("arguments[0].setAttribute('style', '');", element); // remove highlight
+    }
+
     // --- Action Methods ---
     public void enterUsername(String username) {
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(usernameField));
-        element.clear(); // clear in case something is pre-filled
+        highlightElement(element);
+        element.clear();
         element.sendKeys(username);
     }
 
     public void enterPassword(String password) {
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(passwordField));
+        highlightElement(element);
         element.clear();
         element.sendKeys(password);
     }
 
     public void clickLogin() {
-        wait.until(ExpectedConditions.elementToBeClickable(loginButton)).click();
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(loginButton));
+        highlightElement(element);
+        element.click();
     }
 
     public void login(String username, String password) {
@@ -50,11 +66,15 @@ public class LoginPage {
 
     // --- Getter Methods for Assertions ---
     public String getErrorMessage() {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage)).getText();
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage));
+        highlightElement(element);
+        return element.getText();
     }
 
     public boolean isProductsPageDisplayed() {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(productsTitle)).isDisplayed();
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(productsTitle));
+        highlightElement(element);
+        return element.isDisplayed();
     }
 
     // Expose elements (for test class explicit waits)
