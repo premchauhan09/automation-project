@@ -1,4 +1,4 @@
-package page;
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,14 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 
 public class LoginPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    // Locators
     private By usernameField = By.id("user-name");
     private By passwordField = By.id("password");
     private By loginButton   = By.id("login-button");
@@ -22,22 +20,20 @@ public class LoginPage {
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(5)); // max wait 5s
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
-    // Utility: highlight element with red border
     private void highlightElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].setAttribute('style', 'border: 3px solid red;');", element);
+        js.executeScript("arguments[0].setAttribute('style', 'border: 2px solid red;');", element);
         try {
-            Thread.sleep(200); // small pause so highlight is visible
+            Thread.sleep(200);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        js.executeScript("arguments[0].setAttribute('style', '');", element); // remove highlight
+        js.executeScript("arguments[0].setAttribute('style','');", element);
     }
 
-    // --- Action Methods ---
     public void enterUsername(String username) {
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(usernameField));
         highlightElement(element);
@@ -64,7 +60,6 @@ public class LoginPage {
         clickLogin();
     }
 
-    // --- Getter Methods for Assertions ---
     public String getErrorMessage() {
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(errorMessage));
         highlightElement(element);
@@ -77,7 +72,6 @@ public class LoginPage {
         return element.isDisplayed();
     }
 
-    // Expose elements (for test class explicit waits)
     public WebElement getProductsTitleElement() {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(productsTitle));
     }

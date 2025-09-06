@@ -1,9 +1,9 @@
-package tests;
+package testcases;
 
-import base.BaseTest;
+import utils.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import page.HomePage;
+import pages.HomePage;
 
 public class MenuNavigationTest extends BaseTest {
 

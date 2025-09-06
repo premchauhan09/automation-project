@@ -1,10 +1,10 @@
-package tests;
+package testcases;
 
-import base.BaseTest;
+import utils.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import page.HomePage;
+import pages.HomePage;
 
 public class SortingTest extends BaseTest {
     private HomePage homePage;
