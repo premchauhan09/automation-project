@@ -1,0 +1,15 @@
+pages\ProductsPage.class
+testcases\SortingTest.class
+pages\LoginPage.class
+utils\BaseTest.class
+pages\CartPage.class
+pages\HomePage.class
+testcases\CartTest.class
+testcases\AllItemsTest.class
+testcases\MenuNavigationTest.class
+utils\LoginBaseTest.class
+testcases\AddToCartTest.class
+testcases\LoginTest.class
+testcases\CheckoutTest.class
+testcases\MenuOptionsTest.class
+testcases\LogoutTest.class

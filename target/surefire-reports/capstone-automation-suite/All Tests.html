@@ -1,0 +1,195 @@
+<html>
+<head>
+<title>TestNG:  All Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>All Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>23/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Sep 06 11:01:12 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>145 seconds (145904 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.SortingTest.verifySortByPriceHighToLow()'><b>verifySortByPriceHighToLow</b><br>Test class: testcases.SortingTest</td>
+<td></td>
+<td>2</td>
+<td>testcases.SortingTest@1bd4fdd</td></tr>
+<tr>
+<td title='testcases.LoginTest.testErrorUser()'><b>testErrorUser</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>testcases.LoginTest@5b8dfcc1</td></tr>
+<tr>
+<td title='testcases.LogoutTest.testLogout()'><b>testLogout</b><br>Test class: testcases.LogoutTest</td>
+<td></td>
+<td>2</td>
+<td>testcases.LogoutTest@2f9f7dcf</td></tr>
+<tr>
+<td title='testcases.MenuOptionsTest.verifyResetAppState()'><b>verifyResetAppState</b><br>Test class: testcases.MenuOptionsTest</td>
+<td></td>
+<td>2</td>
+<td>testcases.MenuOptionsTest@35e2d654</td></tr>
+<tr>
+<td title='testcases.CheckoutTest.verifyCheckoutFlow()'><b>verifyCheckoutFlow</b><br>Test class: testcases.CheckoutTest</td>
+<td></td>
+<td>4</td>
+<td>testcases.CheckoutTest@72967906</td></tr>
+<tr>
+<td title='testcases.LoginTest.testEmptyPassword()'><b>testEmptyPassword</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>testcases.LoginTest@5b8dfcc1</td></tr>
+<tr>
+<td title='testcases.LoginTest.testLockedOutUser()'><b>testLockedOutUser</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>testcases.LoginTest@5b8dfcc1</td></tr>
+<tr>
+<td title='testcases.MenuNavigationTest.verifyMenuButtonClickable()'><b>verifyMenuButtonClickable</b><br>Test class: testcases.MenuNavigationTest</td>
+<td></td>
+<td>2</td>
+<td>testcases.MenuNavigationTest@747ddf94</td></tr>
+<tr>
+<td title='testcases.LoginTest.testInvalidUsername()'><b>testInvalidUsername</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>testcases.LoginTest@5b8dfcc1</td></tr>
+<tr>
+<td title='testcases.LoginTest.testVisualUser()'><b>testVisualUser</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>testcases.LoginTest@5b8dfcc1</td></tr>
+<tr>
+<td title='testcases.AllItemsTest.verifyAllItemsClickable()'><b>verifyAllItemsClickable</b><br>Test class: testcases.AllItemsTest</td>
+<td></td>
+<td>2</td>
+<td>testcases.AllItemsTest@67c27493</td></tr>
+<tr>
+<td title='testcases.LoginTest.testEmptyUsername()'><b>testEmptyUsername</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>testcases.LoginTest@5b8dfcc1</td></tr>
+<tr>
+<td title='testcases.SortingTest.verifySortByNameAscending()'><b>verifySortByNameAscending</b><br>Test class: testcases.SortingTest</td>
+<td></td>
+<td>2</td>
+<td>testcases.SortingTest@1bd4fdd</td></tr>
+<tr>
+<td title='testcases.SortingTest.verifySortByPriceLowToHigh()'><b>verifySortByPriceLowToHigh</b><br>Test class: testcases.SortingTest</td>
+<td></td>
+<td>2</td>
+<td>testcases.SortingTest@1bd4fdd</td></tr>
+<tr>
+<td title='testcases.CartTest.testAddAndRemoveFromCart()'><b>testAddAndRemoveFromCart</b><br>Test class: testcases.CartTest</td>
+<td></td>
+<td>8</td>
+<td>testcases.CartTest@1a482e36</td></tr>
+<tr>
+<td title='testcases.SortingTest.verifySortByNameDescending()'><b>verifySortByNameDescending</b><br>Test class: testcases.SortingTest</td>
+<td></td>
+<td>2</td>
+<td>testcases.SortingTest@1bd4fdd</td></tr>
+<tr>
+<td title='testcases.LoginTest.testEmptyUsernameAndPassword()'><b>testEmptyUsernameAndPassword</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>testcases.LoginTest@5b8dfcc1</td></tr>
+<tr>
+<td title='testcases.LoginTest.testValidLogin()'><b>testValidLogin</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>testcases.LoginTest@5b8dfcc1</td></tr>
+<tr>
+<td title='testcases.LoginTest.testProblemUser()'><b>testProblemUser</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>testcases.LoginTest@5b8dfcc1</td></tr>
+<tr>
+<td title='testcases.AddToCartTest.testAddToCart()'><b>testAddToCart</b><br>Test class: testcases.AddToCartTest</td>
+<td></td>
+<td>12</td>
+<td>testcases.AddToCartTest@5876a9af</td></tr>
+<tr>
+<td title='testcases.LoginTest.testInvalidPassword()'><b>testInvalidPassword</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>testcases.LoginTest@5b8dfcc1</td></tr>
+<tr>
+<td title='testcases.MenuOptionsTest.verifyAboutLink()'><b>verifyAboutLink</b><br>Test class: testcases.MenuOptionsTest</td>
+<td></td>
+<td>8</td>
+<td>testcases.MenuOptionsTest@35e2d654</td></tr>
+<tr>
+<td title='testcases.LoginTest.testPerformanceGlitchUser()'><b>testPerformanceGlitchUser</b><br>Test class: testcases.LoginTest</td>
+<td></td>
+<td>6</td>
+<td>testcases.LoginTest@5b8dfcc1</td></tr>
+</table><p>
+</body>
+</html>
