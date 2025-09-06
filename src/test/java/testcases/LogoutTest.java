@@ -19,6 +19,7 @@ public class LogoutTest extends BaseTest {
 
         // Step 2: Logout
         homePage.logout();
+        System.out.println("Logout");
 
         // Step 3: Verify we are back on Login page
         Assert.assertTrue(homePage.isLoginPageDisplayed(), "Logout failed, still not on login page!");
