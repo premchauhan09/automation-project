@@ -1,11 +1,11 @@
-package tests;
+package testcases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import base.BaseTest;
-import page.LoginPage;
-import page.ProductsPage;
+import utils.BaseTest;
+import pages.LoginPage;
+import pages.ProductsPage;
 
 public class AddToCartTest extends BaseTest {
 

@@ -1,10 +1,10 @@
-package tests;
+package testcases;
 
-import base.BaseTest;
+import utils.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import page.HomePage;
-import page.CartPage;
+import pages.HomePage;
+import pages.CartPage;
 
 public class CheckoutTest extends BaseTest {
 

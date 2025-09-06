@@ -1,13 +1,13 @@
-package tests;
+package testcases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
-import base.BaseTest;
-import page.LoginPage;
-import page.ProductsPage;
-import page.CartPage;
+import utils.BaseTest;
+import pages.LoginPage;
+import pages.ProductsPage;
+import pages.CartPage;
 
 public class CartTest extends BaseTest {
 
