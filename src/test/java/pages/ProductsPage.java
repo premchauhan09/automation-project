@@ -67,4 +67,15 @@ public class ProductsPage {
         highlightElement(element);
         element.click();
     }
+    // Check if Products page is displayed
+    public boolean isProductsPageDisplayed() {
+        try {
+            WebElement title = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".title")));
+            highlightElement(title);
+            return title.isDisplayed() && title.getText().equals("Products");
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 }

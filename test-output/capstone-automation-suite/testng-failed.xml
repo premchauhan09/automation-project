@@ -1,29 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [capstone-automation-suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="All Tests(failed)">
+  <test thread-count="5" name="Cucumber Tests(failed)">
     <classes>
-      <class name="tests.CartTest">
+      <class name="runners.TestRunner">
         <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="testAddAndRemoveFromCart"/>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
         </methods>
-      </class> <!-- tests.CartTest -->
-      <class name="tests.LogoutTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="testLogout"/>
-        </methods>
-      </class> <!-- tests.LogoutTest -->
-      <class name="tests.AddToCartTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="testAddToCart"/>
-        </methods>
-      </class> <!-- tests.AddToCartTest -->
+      </class> <!-- runners.TestRunner -->
     </classes>
-  </test> <!-- All Tests(failed) -->
+  </test> <!-- Cucumber Tests(failed) -->
 </suite> <!-- Failed suite [capstone-automation-suite] -->

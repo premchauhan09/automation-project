@@ -7,7 +7,7 @@ import io.cucumber.java.en.Then;
 public class LoginSteps {
     @Given("user is on login page")
     public void user_on_login_page() {
-        System.out.println("User navigates to login page");
+        System.out.println("User navigates  to login page");
     }
 
     @When("user enters valid credentials")
