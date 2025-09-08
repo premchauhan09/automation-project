@@ -3,17 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.SortingTest">
+      <class name="testcases.SortingTest">
         <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
           <include name="verifySortByPriceLowToHigh"/>
           <include name="verifySortByNameDescending"/>
           <include name="setupTest"/>
           <include name="verifySortByNameAscending"/>
           <include name="verifySortByPriceHighToLow"/>
         </methods>
-      </class> <!-- tests.SortingTest -->
+      </class> <!-- testcases.SortingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
