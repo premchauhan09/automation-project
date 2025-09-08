@@ -1,5 +1,15 @@
 ﻿# Capstone Automation Project
 
+
+
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](#)
+[![Maven](https://img.shields.io/badge/Maven-3.9+-blue)](#)
+[![TestNG](https://img.shields.io/badge/TestNG-Framework-orange)](#)
+[![Cucumber](https://img.shields.io/badge/Cucumber-BDD-green)](#)
+[![Jenkins](https://img.shields.io/badge/Jenkins-CI%2FCD-red)](#)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black)](#) 
+
+
 ## ✨ Features Automated
 - **Automated Login Test** – Valid and invalid credentials with multiple user types  
 - **Add to Cart** – Add/remove products and validate cart items  
@@ -37,3 +47,5 @@ Automation is implemented on: [SauceDemo.com](https://www.saucedemo.com/)
 - Install **WebDriver (ChromeDriver/GeckoDriver as per browser)**  
 - Install **Jenkins** for CI/CD (optional but recommended)  
 - IDE: **Eclipse**, IntelliJ IDEA, or VS Code  
+
+
